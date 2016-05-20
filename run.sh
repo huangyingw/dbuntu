@@ -12,6 +12,7 @@ done
 docker build -f Dockerfile -t "$imageName" .
 docker run \
   --net=host \
+  -v ~/Dropbox/loadrc:/root/loadrc \
   -it "$imageName" bash
 
 cd -
