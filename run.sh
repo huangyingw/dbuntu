@@ -8,8 +8,8 @@ imageName=huangyingw/dbuntu
 docker build -f Dockerfile -t "$imageName" .
 docker run \
   --net=host \
-  -v ~/Dropbox/loadrc:/root/loadrc \
-  -v ~/Dropbox/loadrc/.bashrc:/root/.bashrc \
+  -v ~/loadrc:/root/loadrc \
+  -v ~/loadrc/.bashrc:/root/.bashrc \
   -d "$imageName"
 
 cd -
