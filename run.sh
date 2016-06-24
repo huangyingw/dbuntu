@@ -4,11 +4,7 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
 imageName=huangyingw/dbuntu
-for CONTAINERID in $(docker ps|grep "$imageName"|awk '{print $1}' )
-do
-  docker stop "$CONTAINERID"
-  docker rm "$CONTAINERID"
-done
+~/loadrc/dockerrc/killContainer.sh "$imageName"
 docker build -f Dockerfile -t "$imageName" .
 docker run \
   --net=host \
