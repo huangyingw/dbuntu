@@ -5,7 +5,7 @@ cd "$SCRIPTPATH"
 
 imageName=huangyingw/dbuntu
 ~/loadrc/dockerrc/killContainer.sh "$imageName"
-docker build -f Dockerfile -t "$imageName" .
+./build.sh "$imageName"
 docker run \
   --net=host \
   -v ~/loadrc:/root/loadrc \
