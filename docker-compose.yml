@@ -6,3 +6,4 @@ services:
     network_mode: "host"
     volumes:
       - ./var/log/:/var/log/
+    command: /bin/sh -c "/entrypoint.sh > /var/log/containner.log 2>&1"
