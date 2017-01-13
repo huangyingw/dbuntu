@@ -2,6 +2,12 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install -y curl wget perl pwgen --no-install-recommends vim-gnome git cscope curl wget perl pwgen --no-install-recommends software-properties-common python3-software-properties gdebi-core realpath
 
+RUN \
+  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  add-apt-repository -y ppa:webupd8team/java && \
+  apt-get update && \
+  apt-get install -y oracle-java8-installer maven
+
 RUN { \
 echo mysql-community-server mysql-community-server/data-dir select ''; \
 echo mysql-community-server mysql-community-server/root-pass password ''; \
