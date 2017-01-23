@@ -7,5 +7,8 @@ services:
         image: huangyingw/dbuntu
         network_mode: "host"
         volumes:
-            - ./var/log/:/var/log/
+            - /Users/huangyingw/Dropbox/myproject/git/work/TutorGroup/H2HDev/h2h-server/logs/:/var/logs/
+            - ./export/home1/username/cscope_db/:/export/home1/username/cscope_db/
+            - /Users/huangyingw/Dropbox/myproject/git/work/TutorGroup/H2HDev/h2h-server/.m2/:/root/.m2/
+            - ~/loadrc/:/root/loadrc/
         command: /bin/sh -c "/entrypoint.sh > /var/log/containner.log 2>&1"
