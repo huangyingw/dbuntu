@@ -7,7 +7,6 @@ services:
         image: huangyingw/dbuntu
         network_mode: "host"
         volumes:
-            - ./var/logs/:/var/logs/
             - ./export/home1/username/cscope_db/:/export/home1/username/cscope_db/
             - ~/.m2/:/root/.m2/
             - ~/loadrc/:/root/loadrc/
