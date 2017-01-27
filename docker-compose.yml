@@ -5,7 +5,6 @@ services:
             context: .
             dockerfile: Dockerfile
         image: huangyingw/dbuntu
-        network_mode: "host"
         volumes:
             - ./export/home1/username/cscope_db/:/export/home1/username/cscope_db/
             - ~/.m2/:/root/.m2/
