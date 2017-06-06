@@ -1,4 +1,4 @@
-version: '3.0'
+version: '2.0'
 services:
     dbuntu:
         build:
@@ -6,10 +6,10 @@ services:
             dockerfile: Dockerfile
         image: huangyingw/dbuntu
         volumes:
-            - ./export/home1/username/cscope_db/:/export/home1/username/cscope_db/
             - ~/.m2/:/root/.m2/
             - ~/loadrc/:/root/loadrc/
             - ~/loadrc/gitrc/.gitconfig:/root/.gitconfig
             - ./.bashrc:/root/.bashrc
             - ./var/logs/:/var/logs/
+            - ./etc/apt/sources.list:/etc/apt/sources.list
         command: /bin/sh -c "/entrypoint.sh > /var/logs/containner.log 2>&1"
