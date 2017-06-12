@@ -1,4 +1,4 @@
-version: '2.0'
+version: '2.1'
 services:
     dbuntu:
         build:
@@ -11,5 +11,4 @@ services:
             - ~/loadrc/gitrc/.gitconfig:/root/.gitconfig
             - ./.bashrc:/root/.bashrc
             - ./var/logs/:/var/logs/
-            - ./etc/apt/sources.list:/etc/apt/sources.list
         command: /bin/sh -c "/entrypoint.sh > /var/logs/containner.log 2>&1"
