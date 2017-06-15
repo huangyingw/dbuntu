@@ -6,9 +6,10 @@ services:
             dockerfile: Dockerfile
         image: huangyingw/dbuntu
         volumes:
-            - ~/.m2/:/root/.m2/
-            - ~/loadrc/:/root/loadrc/
-            - ~/loadrc/gitrc/.gitconfig:/root/.gitconfig
             - ./.bashrc:/root/.bashrc
             - ./var/logs/:/var/logs/
+            - ~/.m2/:/root/.m2/
+            - ~/loadrc/:/root/loadrc/
+            - ~/.ssh/:/root/.ssh/
+            - ~/loadrc/gitrc/.gitconfig:/root/.gitconfig
         command: /bin/sh -c "/entrypoint.sh > /var/logs/containner.log 2>&1"
