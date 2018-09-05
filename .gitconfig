@@ -1,0 +1,10 @@
+[merge]
+    allow = true
+[commit]
+    message = n
+[vrun]
+    silent = true
+    async = false
+[deploy]
+    host = mini
+    path = ~/myproject/git/docker/dbuntu
