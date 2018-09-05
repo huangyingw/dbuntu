@@ -9,7 +9,7 @@
 "./includefile.conf"
 "./prunefile.conf"
 "./prunefix.conf"
-"./run.sh"
+"./run.rsh"
 "./running.lck"
 "./running.time"
 "./sources.list"
