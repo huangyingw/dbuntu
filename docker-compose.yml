@@ -12,4 +12,4 @@ services:
             - ~/loadrc/:/root/loadrc/
             - ~/.ssh/:/root/.ssh/
             - ~/loadrc/gitrc/.gitconfig:/root/.gitconfig
-        command: /bin/sh -c "/entrypoint.sh > /var/logs/containner.log 2>&1"
+        command: /bin/sh -c "/entrypoint.sh 2>&1 | tee /var/logs/containner.log"
