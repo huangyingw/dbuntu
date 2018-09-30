@@ -1,5 +1,6 @@
-#!/bin/bash - 
+#!/bin/bash -
+
 while true
-do 
-  :
+do
+    ping mini
 done
