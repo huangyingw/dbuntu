@@ -6,5 +6,16 @@
     silent = true
     async = false
 [deploy]
-    host = mini
+    host = localhost
     path = ~/myproject/git/docker/dbuntu
+[remote "github"]
+    url = git@github.com:huangyingw/dbuntu.git
+    fetch = +refs/heads/*:refs/remotes/github/*
+[branch "dev"]
+    remote = github
+    merge = refs/heads/dev
+[push]
+    remote = github
+[gsync]
+    remote = github
+    branch = master
