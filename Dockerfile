@@ -25,4 +25,4 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 WORKDIR /root
 COPY ./entrypoint.sh /entrypoint.sh
 
-CMD ["/entrypoint.sh"]
+CMD ["/bin/sh", "-c", "/entrypoint.sh 2>&1 | tee /var/logs/containner.log"]
