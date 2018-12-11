@@ -13,3 +13,4 @@
 "./running.lck"
 "./running.time"
 "./sources.list"
+"./var/logs/containner.log"
